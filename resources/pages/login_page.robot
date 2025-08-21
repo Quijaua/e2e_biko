@@ -1,6 +1,7 @@
 *** Settings ***
 Library    SeleniumLibrary
 Resource    ../locators/login_locators.robot
+Resource    ../locators/common_locators.robot
 
 *** Keywords ***
 Realizar login
@@ -9,4 +10,4 @@ Realizar login
     Input Text    ${LOGIN_EMAIL_INPUT}    ${email}
     Input Text    ${LOGIN_PASSWORD_INPUT}    ${password}
     Click Button    ${LOGIN_SUBMIT_BUTTON}
-    Wait Until Page Contains Element    id=algum-elemento-da-home    timeout=10s    # Ajuste conforme o elemento esperado após login
+    Wait Until Page Contains Element    ${H1_BIKO}   timeout=10s

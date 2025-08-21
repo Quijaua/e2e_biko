@@ -1,0 +1,18 @@
+*** Variables ***
+${HOME_LINK}    //div[@id='sidebar-menu']//a[contains(., 'Home')]
+${PAINEL_LINK}    //div[@id='sidebar-menu']//a[contains(., 'Painel')]
+${ESTUDANTES_LINK}    //div[@id='sidebar-menu']//a[contains(., 'Estudantes')]
+${PROFESSORES_LINK}    //div[@id='sidebar-menu']//a[contains(., 'Professores')]
+${COORDENADORES_LINK}    //div[@id='sidebar-menu']//a[contains(., 'Coordenadores')]
+${PSICOLOGOS_LINK}    //div[@id='sidebar-menu']//a[contains(., 'Psicólogos')]
+${ATENDIMENTO_PSICOLOGICO_LINK}    //div[@id='sidebar-menu']//a[contains(., 'Atendimento Psicológico')]
+${PLANTAO_PSICOLOGICO_LINK}    //div[@id='sidebar-menu']//a[contains(., 'Plantão Psicológico')]
+${NUCLEOS_LINK}    //div[@id='sidebar-menu']//a[contains(., 'Núcleos')]
+${LISTA_PRESENCA_LINK}    //div[@id='sidebar-menu']//a[contains(., 'Lista de presença')]
+${NUCLEO_VIRTUAL_LINK}    //div[@id='sidebar-menu']//a[contains(., 'Núcleo Virtual')]
+${CONFIGURACOES_LINK}    //div[@id='sidebar-menu']//a[contains(., 'Configurações')]
+${MATERIAL_LINK}    //div[@id='sidebar-menu']//a[contains(., 'Material')]
+${MENSAGENS_LINK}    //div[@id='sidebar-menu']//a[contains(., 'Mensagens')]
+${EAD_LINK}    //div[@id='sidebar-menu']//a[contains(., 'EAD')]
+${SAIR_LINK}    //div[@id='sidebar-menu']//a[contains(., 'Sair')]
+
