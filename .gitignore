@@ -2,4 +2,4 @@
 venv
 results/*
 .env
-setup/*
+setup/setup_variables.robot
