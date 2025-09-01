@@ -17,6 +17,12 @@
 
 2. **Crie e ative um ambiente virtual (opcional, recomendado):**
 
+   Instalando virtualizador de python em Ubuntu
+   ```bash
+   sudo apt install python3.10-venv
+   ```
+
+   Criando ambiente virtual
    ```bash
    python3 -m venv .venv
    source .venv/bin/activate
@@ -32,22 +38,27 @@
 
    - Para Chrome: [Baixe o ChromeDriver](https://chromedriver.chromium.org/downloads) compatível com sua versão do Chromium.
 
+   ou em Ubuntu rode o comando
+   ```bash
+   sudo apt install chromium-chromedriver
+   ```
+
 5. **Configuração de variáveis:**
 
 Antes de rodar os testes, copie o arquivo `setup/setup_variables.exemplo.robot` para `setup/setup_variables.robot` e edite as credenciais de login conforme seu ambiente:
 
-````robotframework
+```robotframework
 *** Variables ***
 ${URL}     http://SEU_SERVIDOR:8000/
 ${LOGIN_EMAIL}     seu_email@dominio.com
 ${LOGIN_PASSWORD}  sua_senha
-```s
+```
 
 ## Como executar os testes
 
 ```bash
 robot -d results tests
-````
+```
 
 - Os relatórios serão gerados na pasta `results`.
 
