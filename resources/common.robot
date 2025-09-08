@@ -10,6 +10,7 @@ ${BROWSER}    chrome
 Abrir navegador
     Open Browser    ${URL}    ${BROWSER}
     Maximize Browser Window
+    Wait Until Element Is Visible    //input[@name='email']    timeout=10s
     Realizar login    ${LOGIN_EMAIL}    ${LOGIN_PASSWORD}
 
 Fechar navegador
