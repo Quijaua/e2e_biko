@@ -1,12 +1,14 @@
 *** Settings ***
+Library   SeleniumLibrary
+Library   OperatingSystem
+
 Resource    ../resources/common.robot
 Resource    ../resources/keywords/nucleo_virtual_keywords.robot
 Resource    ../setup/setup_nucleo_virutal.robot
 
 Test Setup    Abrir navegador
 Test Teardown    Fechar navegador
-Library    ../.venv/lib/site-packages/robot/libraries/OperatingSystem.py
-    
+
 
 *** Test Cases ***
 Cenário: Verificar navegação para Núcleo Virtual
