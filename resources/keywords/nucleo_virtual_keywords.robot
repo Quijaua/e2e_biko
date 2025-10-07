@@ -3,6 +3,7 @@ Resource    ../pages/side_menu_page.robot
 Resource    ../pages/nucleo_virtual_page.robot
 Resource    ../locators/nucleo_virtual_locators.robot
 Resource    ../../setup/setup_nucleo_virutal.robot
+Resource    ../../setup/setup_variables.robot
 
 *** Keywords ***
 Dado que estou na página inicial
@@ -27,7 +28,7 @@ Quando tento enviar o formulário vazio
     Tentar enviar formulário vazio
 
 Então o sistema não deve permitir o envio do formulário vazio
-    Location Should Be    http://100.101.47.64:8000/ambiente-virtual/create
+    Location Should Be   ${URL}/ambiente-virtual/create
 
 Quando preencho e envio o cadastro de aula válido
     [Arguments]    ${professor}    ${disciplina}    ${imagem}    ${video_link}

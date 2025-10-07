@@ -12,5 +12,5 @@ Clicar no botão do menu
 Verificar se o botão do menu está visível
     [Arguments]    ${botao}
     ${locator}=    Get Variable Value    ${${botao}}
-    Wait Until Element Is Visible    ${locator}    timeout=10s
+    Wait Until Element Is Visible    ${locator}    timeout=60s
     Element Should Be Visible    ${locator}

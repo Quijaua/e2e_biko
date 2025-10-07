@@ -18,11 +18,13 @@
 2. **Crie e ative um ambiente virtual (opcional, recomendado):**
 
    Instalando virtualizador de python em Ubuntu
+
    ```bash
    sudo apt install python3.10-venv
    ```
 
    Criando ambiente virtual
+
    ```bash
    python3 -m venv .venv
    source .venv/bin/activate
@@ -39,6 +41,7 @@
    - Para Chrome: [Baixe o ChromeDriver](https://chromedriver.chromium.org/downloads) compatível com sua versão do Chromium.
 
    ou em Ubuntu rode o comando
+
    ```bash
    sudo apt install chromium-chromedriver
    ```

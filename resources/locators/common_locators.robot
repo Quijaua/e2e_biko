@@ -1,2 +1,2 @@
 *** Variables ***
-${H1_BIKO}    //h1[text()='Biko']
+${H1_BIKO}    //h1[text()='UNEafro']
