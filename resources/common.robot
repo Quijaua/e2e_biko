@@ -7,6 +7,9 @@ Resource    ../setup/setup_variables.robot
 ${BROWSER}    chrome
 
 *** Keywords ***
+Abrir tela de login
+    Open Browser    ${URL}  ${BROWSER}
+    Maximize Browser Window
 Abrir navegador
     Open Browser    ${URL}  ${BROWSER}
     Maximize Browser Window

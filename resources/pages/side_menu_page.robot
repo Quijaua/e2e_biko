@@ -1,6 +1,7 @@
 *** Settings ***
 Library    SeleniumLibrary
 Resource    ../locators/side_menu_locators.robot
+Resource    ../locators/pre_cadastro_locators.robot
 
 *** Keywords ***
 Clicar no botão do menu

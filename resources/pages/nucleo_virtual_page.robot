@@ -3,6 +3,7 @@ Library   SeleniumLibrary
 Library   OperatingSystem
 Resource    ../locators/nucleo_virtual_locators.robot
 Resource    ../../setup/setup_variables.robot
+Resource    ../../setup/setup_nucleo_virutal.robot
 
 *** Keywords ***
  Verificar se o título está presente
