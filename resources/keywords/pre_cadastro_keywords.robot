@@ -7,7 +7,7 @@ Resource   ../locators/pre_cadastro_locators.robot
 *** Keywords ***
 Gerar Email Random
     ${random_string}=    Generate Random String    8    [LETTERS][NUMBERS]
-    [Return]    ${random_string}@email.com
+    RETURN    ${random_string}@email.com
 
 Verificar elemento de seleção de estado
     [Documentation]    Verifica se o elemento "Selecione seu Estado" está visível na tela.
@@ -46,26 +46,25 @@ Preencher e enviar formulário
     ${random_email}=    Gerar Email Random
     Input Text    ${CAMPO_NOME}    João da Silva
     Input Text    ${CAMPO_EMAIL}    ${random_email}
-    
-    # Phone with mask (11) 9 1234-5678
     Press Keys    ${CAMPO_TELEFONE}    11912345678
-    
-    # CEP with mask
-    Press Keys    ${CAMPO_CEP}    11013030
-    Sleep    3s    # Wait for address auto-fill
-    
+    Press Keys    ${CAMPO_CEP}    13010002
+    Sleep    3s
     Input Text    ${CAMPO_NUMERO}    123
     Wait Until Element Is Visible    ${CAMPO_NASCIMENTO}    timeout=10s
-    Input Text    ${CAMPO_NASCIMENTO}    01-01-2000
+
+    Click Element    ${CAMPO_NASCIMENTO}
+    ${DATA}=    Set Variable    01/01/1990
+    ${day}    ${month}    ${year}=    Split String    ${DATA}    /
+    ${iso}=    Set Variable    ${year}-${month}-${day}
+    Execute JavaScript    document.getElementById('inputNascimento').value = '${iso}'; document.getElementById('inputNascimento').dispatchEvent(new Event('input',{bubbles:true})); document.getElementById('inputNascimento').dispatchEvent(new Event('change',{bubbles:true})); document.getElementById('inputNascimento').blur();
+    Click Element    xpath=//body
+    Sleep    1s
+
     Select From List By Label    ${DROPDOWN_RACA}    Parda
-    
-    # Scroll and submit
     Execute JavaScript    window.scrollTo(0, document.body.scrollHeight)
     Sleep    1s
     Wait Until Element Is Visible    ${BOTAO_SUBMIT}    timeout=10s
     Wait Until Element Is Enabled    ${BOTAO_SUBMIT}    timeout=10s
     Click Button    ${BOTAO_SUBMIT}
-    
-    # Validate success modal
     Wait Until Element Is Visible    ${MODAL_SUCESSO}    timeout=30s
     Wait Until Element Contains    ${TITULO_MODAL_SUCESSO}    👏 Cadastro efetuado com sucesso    timeout=10s
