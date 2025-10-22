@@ -10,7 +10,7 @@ ${BROWSER}       firefox
 *** Keywords ***
 Open Browser Custom
     ${options}=    Evaluate    sys.modules['selenium.webdriver'].FirefoxOptions()    sys
-    Call Method    ${options}    add_argument    --headless
+    # Call Method    ${options}    add_argument    --headless
     Open Browser    ${URL}    ${BROWSER}    options=${options}
     Set Window Size    1920    1400
     # Maximize Browser Window
