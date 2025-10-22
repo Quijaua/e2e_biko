@@ -3,7 +3,7 @@
 ## Pré-requisitos
 
 - Python 3.8+
-- Google Chrome instalado
+- Firefox instalado
 - pip (gerenciador de pacotes Python)
 
 ## Instalação
@@ -82,3 +82,11 @@ robot -d results tests
   ```bash
   robot -d results -i adicionar_aula tests
   ```
+
+## Como rodar os testes em modo handless (Apenas no terminal sem mostrar o navegador)
+
+Descomente a linha:
+
+```bash
+    # Call Method    ${options}    add_argument    --headless
+```
